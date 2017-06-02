@@ -1,5 +1,4 @@
 <?php
-echo 'Hello, world!';
 error_reporting(E_ERROR);
 if(!isset($_SESSION['user_login'])){
     $_SESSION['user_login'] = '';

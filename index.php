@@ -25,9 +25,8 @@ include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php"); session_start(); 
 <?= include($_SERVER['DOCUMENT_ROOT'] . "/templates/template_footer.php") ?>
 
 <?php
-//session_start();
-//echo $_SESSION['online'];
-//?>
+echo 'Hello, world!';
+?>
 
 <script src="js/fragranta.js"></script>
 </body>
