@@ -1,6 +1,7 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php");
 $page = 'Подарки';
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

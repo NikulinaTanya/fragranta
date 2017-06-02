@@ -240,7 +240,7 @@ function ProductPriceAmount($shop){
 }
 
 function EditProduct($id){
-    session_start();
+    
     if($_SESSION['admin_online'] == 1){
         $result = '<a class="product__shopcart" href="/admin/edit_product.php?i='.$id.'"><i class="sgicon sgicon-Edit"></i></a>';
     } else {
