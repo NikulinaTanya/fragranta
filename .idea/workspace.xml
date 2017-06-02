@@ -22,21 +22,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generator/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.543379">
+              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="template_banner_full_text.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/template_banner_full_text.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52397263">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state vertical-scroll-proportion="-18.307692">
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -130,6 +140,7 @@
         <option value="$PROJECT_DIR$/generator/db/company.txt" />
         <option value="$PROJECT_DIR$/generator/db/amount.txt" />
         <option value="$PROJECT_DIR$/generator/functions.php" />
+        <option value="$PROJECT_DIR$/templates/template_banner_full_text.php" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -329,14 +340,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/template_banner_full.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template_banner_full_text.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -704,18 +707,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generator/functions.php">
+    <entry file="file://$PROJECT_DIR$/templates/template_banner_full_text.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52397263">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.543379">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding />
         </state>
       </provider>
