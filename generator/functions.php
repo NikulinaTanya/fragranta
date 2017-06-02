@@ -294,7 +294,10 @@ function MakeNews($from, $max){
 
 function AddNextPrevNews($from, $max){
     $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/news.txt"));
-
+	
+	if(!isset($from) || $from == ''){
+        $from = 0;
+    }
     $catch = 0;
     $next = '<a class="nonactive">След.</a>';
     $prev = '<a class="nonactive">Пред.</a>';

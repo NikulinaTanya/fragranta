@@ -20,8 +20,8 @@
         </td>
         <td colspan="6" class="right-text-align">
             <?php
-            if(empty($_GET['i'])){
-                AddNextPrevNews($_GET['f'],5);
+            if(!isset($_GET['i'])){
+                echo AddNextPrevNews($_GET['f'],5);
             }
             ?>
         </td>
