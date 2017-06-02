@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ERROR);
+
 function MakeAmount(){
     $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/amount.txt"));
     if($_GET['amount'] == ''){
