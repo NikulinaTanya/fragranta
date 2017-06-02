@@ -1,4 +1,7 @@
-<?php  include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php"); session_start(); ?>
+<?php
+ini_set('display_errors',0);
+error_reporting(E_ALL);
+include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php"); session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
