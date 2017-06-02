@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $colspan = ($_SESSION['user_online'] == 1) ? 2 : 3;
 ?>
 <!-- Каталог блок -->
