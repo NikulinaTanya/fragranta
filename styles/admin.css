@@ -1,0 +1,110 @@
+.admin{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.admin tr{
+    vertical-align: middle;
+}
+
+.admin tr{
+    /* height: 100%; */
+    text-align: center;
+    vertical-align: top;
+    display: block;
+    /* width: auto; */
+    /* margin: 0 auto; */
+}
+
+.admin td{
+    display: inline-block;
+}
+
+.admin .table-grid{
+    height: 0;
+}
+
+.login-form{
+    display: inline-block;
+    width: 400px;
+}
+
+.login-form > label{
+    position: relative;
+    display: block;
+    padding: 5px 0;
+}
+
+.login-form__input > img{
+    width: 100%;
+}
+
+.login-form > label > input, .login-form > label > select, .login-form > label > textarea{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: auto;
+    font-size: 16px;
+    padding: 10px 30px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #999999;
+    color: #333333;
+}
+
+.login-form > .login-form__submit > input, .login-form > label > select{
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    cursor: pointer;
+    color: #999999;
+}
+
+.login-form > h3{
+    font-size: 17px;
+    font-weight: 300;
+    padding-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.login-form > h3 > span{
+    font-size: 30px;
+    color: #f1a899;
+}
+
+.login-form > .login-form__submit > input:hover{
+    background-color: #f1a899;
+    color: #ffffff;
+    border-color: #f1a899;
+}
+
+.login-form > .login-form__submit{
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.login-form > h3.changeproduct{
+    padding-bottom: 30px;
+}
+
+.login-form > h3.deleteproduct{
+    padding-bottom: 0;
+}
+
+.login-form > label > input[type="checkbox"]{
+    position: fixed;
+    top: -999px;
+    left: -999px;
+}
+
+.login-form > label > input[type="checkbox"] ~ *{
+    cursor: pointer;
+}
+
+.login-form__input > span{
+    font-size: 16px;
+    color: #999999;
+}

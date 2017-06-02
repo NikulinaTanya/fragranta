@@ -1,0 +1,96 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #222222;
+    font-family: "SegoeUI", "Arial", Arial, serif;
+    overflow-x: hidden;
+}
+
+/*::selection {*/
+/*background: transparent;*/
+/*color: inherit;*/
+/*}*/
+/*::-moz-selection {*/
+/*background: transparent;*/
+/*color: inherit;*/
+/*}*/
+/*::-webkit-selection {*/
+/*background: transparent;*/
+/*color: inherit;*/
+/*}*/
+
+table {
+    border-spacing: 0;
+    border: 0;
+}
+
+ul {
+    list-style: none;
+}
+*{
+    box-sizing: border-box;
+    font-family: inherit;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 300ms ease;
+}
+
+div, section, footer {
+    position: relative;
+}
+
+iframe, p, img, table, ul, ol, li, div, section, footer, header, iframe, h2, h3, h4, h1, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+input, button, textarea, select, option {
+    border: none;
+    webkit-appearance: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    resize: none;
+    -webkit-transition: background-color 250ms, color 250ms, border-color 250ms;
+    transition: background-color 250ms, color 250ms, border-color 250ms;
+    font-size: 16px;
+}
+
+.parent:before {
+    content: "";
+    display: inline-block;
+    min-height: inherit;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.middle {
+    display: inline-block;
+    vertical-align: middle;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.float-left{
+    display: inline-block;
+    float: left;
+}
+
+.float-right{
+    display: inline-block;
+    float: right;
+}
+
+.number{
+    font-family: "Arial", Arial;
+}

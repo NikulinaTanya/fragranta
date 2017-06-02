@@ -1,0 +1,1 @@
+a:2:{i:0;s:0:"";i:1;a:4:{s:5:"login";s:11:"roschoupkin";s:8:"password";s:4:"1111";s:4:"name";s:12:"Даниил";s:6:"adress";s:6:"Дом";}}
