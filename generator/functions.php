@@ -1,6 +1,6 @@
 <?php
-if(!isset($_SESSION['user_login'])){
-    $_SESSION['user_login'] = '';
+if(!isset($_SESSION['user_online'])){
+    $_SESSION['user_online'] = '';
 }
 
 function MakeAmount(){

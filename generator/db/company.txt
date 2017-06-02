@@ -1,1 +1,1 @@
-a:3:{i:1;s:12:"Paco Rabanne";i:2;s:16:"Carolina Herrera";i:3;s:7:"Mancera";}
+a:6:{i:1;s:12:"Paco Rabanne";i:2;s:16:"Carolina Herrera";i:3;s:7:"Mancera";i:4;s:14:"Christian Dior";i:5;s:9:"HUGO BOSS";i:6;s:7:"Vercace";}
