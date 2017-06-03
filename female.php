@@ -1,7 +1,6 @@
 <?php
     include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php");
     $page = 'Женские';
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

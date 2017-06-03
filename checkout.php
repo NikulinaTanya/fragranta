@@ -1,9 +1,12 @@
-<?php  include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php"); ?>
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . "/generator/functions.php");
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fragranta. Интернет-магазин парфюмерии</title>
+    <title>Fragranta. Оформить заказ.</title>
 
     <link rel="stylesheet" href="styles/font-awesome.min.css" />
     <link rel="stylesheet" href="styles/font-face.css" />
@@ -12,21 +15,13 @@
     <link rel="stylesheet" href="styles/jquery-ui.css" />
     <link rel="stylesheet" href="styles/setting.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/admin.css" />
 
     <script src="js/jQuery.js"></script>
     <script src="js/jQueryUI.js"></script>
 </head>
 <body>
-<?= include($_SERVER['DOCUMENT_ROOT'] . "/templates/template_header.php") ?>
-<?= include($_SERVER['DOCUMENT_ROOT'] . "/templates/template_catalog_filter.php") ?>
-<?= include($_SERVER['DOCUMENT_ROOT'] . "/templates/template_banner_full_text.php") ?>
-<?= include($_SERVER['DOCUMENT_ROOT'] . "/templates/template_catalog.php") ?>
-<?= include($_SERVER['DOCUMENT_ROOT'] . "/templates/template_footer.php") ?>
-
-<?php
-//session_start();
-//echo $_SESSION['online'];
-//?>
+<?=include($_SERVER['DOCUMENT_ROOT'] . "/templates/template_checkout.php")?>
 
 <script src="js/fragranta.js"></script>
 </body>

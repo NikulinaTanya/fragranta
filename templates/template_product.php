@@ -67,7 +67,11 @@ switch($array[$id]['category']){
                 <?=$year?>
                 <?=$amount?>
             </ul>
+            <?php if(FindInOneArrayCart($id, unserialize($_COOKIE['cart'])) <> 0): ?>
+            <a class="product__shopcart gray_button" href="/cart">Добавлено в корзину!</a>
+            <?php else: ?>
             <a class="product__shopcart" href="/include/add_to_shoping_cart.php?i=<?=$id?>">Добавить в корзину!</a>
+            <?php endif; ?>
             <?=EditProduct($id)?>
         </td>
         <td class="product__image" colspan="5">

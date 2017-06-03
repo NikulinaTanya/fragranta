@@ -33,6 +33,7 @@ if($_SESSION['user_online'] == 1 && $_SESSION['user_message'] <> 0){
         <td colspan="4" class="right-text-align header__search">
             <a href="/cart" class="shoppingcart">
                 <span>Корзина</span>
+                <span class="cart_amount">(<?= isset($_COOKIE['cart']) && count(unserialize($_COOKIE['cart'])) <> 0 ? count(unserialize($_COOKIE['cart'])) : 0; ?>)</span>
                 <i class="sgicon sgicon-FullShoppingCart"></i>
             </a>
         </td>

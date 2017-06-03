@@ -1,7 +1,6 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php");
 $page = 'Популярно';
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">

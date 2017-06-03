@@ -1,9 +1,12 @@
-<?php  include($_SERVER['DOCUMENT_ROOT'] . "/generator/functions.php"); ?>
+<?php
+include($_SERVER['DOCUMENT_ROOT'] . "/generator/functions.php");
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fragranta. Ошибка.</title>
+    <title>Fragranta. Список заказов</title>
 
     <link rel="stylesheet" href="../styles/font-awesome.min.css" />
     <link rel="stylesheet" href="../styles/font-face.css" />
@@ -18,13 +21,15 @@
     <script src="../js/jQueryUI.js"></script>
 </head>
 <body>
+
 <?php
-    if(isset($_GET['m'])){
-        include($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/template_error.php");
-    } else {
-        header('location: /');
-    }
+if($_SESSION['admin_online'] == 1){
+    include($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/template_order.php");
+} else {
+    include($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/template_admin.php");
+}
 ?>
+
 
 <script src="../js/fragranta.js"></script>
 </body>

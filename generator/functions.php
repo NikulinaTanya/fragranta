@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ERROR);
-
 function MakeAmount(){
     $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/amount.txt"));
     if($_GET['amount'] == ''){
@@ -108,6 +106,16 @@ function FindInOneArray($searchword, $array){
     foreach ($array as $k => $v) {
         if ($array[$k] == $searchword) {
             $matches = $k;
+        }
+    }
+    return $matches;
+}
+
+function FindInOneArrayCart($searchword, $array){
+    $matches = 0;
+    foreach ($array as $k => $v) {
+        if ($array[$k] == $searchword) {
+            $matches = $k+1;
         }
     }
     return $matches;
@@ -242,7 +250,7 @@ function ProductPriceAmount($shop){
 }
 
 function EditProduct($id){
-    
+    session_start();
     if($_SESSION['admin_online'] == 1){
         $result = '<a class="product__shopcart" href="/admin/edit_product.php?i='.$id.'"><i class="sgicon sgicon-Edit"></i></a>';
     } else {
@@ -264,6 +272,17 @@ function LoginTest($searchword, $array){
 function AddComment($searchword){
     $matches = '';
     $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/comments.txt"));
+    foreach ($array as $k => $v) {
+        if ($array[$k]['id'] == $searchword) {
+            $matches .= (include($_SERVER['DOCUMENT_ROOT'] . "/templates/elements/template_comment.php"));
+        }
+    }
+    return $matches;
+}
+
+function AddOrder($searchword){
+    $matches = '';
+    $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/orders.txt"));
     foreach ($array as $k => $v) {
         if ($array[$k]['id'] == $searchword) {
             $matches .= (include($_SERVER['DOCUMENT_ROOT'] . "/templates/elements/template_comment.php"));
@@ -296,8 +315,8 @@ function MakeNews($from, $max){
 
 function AddNextPrevNews($from, $max){
     $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/news.txt"));
-	
-	if(!isset($from) || $from == ''){
+
+    if(!isset($from) || $from == ''){
         $from = 0;
     }
     $catch = 0;
@@ -332,5 +351,73 @@ function AddNews($online){
         return false;
     }
 }
+
+function AddNextPrevOrder($from, $max){
+    $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/orders.txt"));
+
+    if(!isset($from) || $from == ''){
+        $from = 0;
+    }
+    $catch = 0;
+    $next = '<a class="nonactive">След.</a>';
+    $prev = '<a class="nonactive">Пред.</a>';
+    foreach ($array as $i => $v) {
+        if($i > $from && $catch < ($max+1)){
+            if($array[$i]['date'] <> ''){
+                $catch++;
+                if($catch == $max){
+                    if($from <> ''){
+                        $next = '<a href="?f='.$i.'">След.</a>';
+                    } else {
+                        $next = '<a href="?f='.$i.'">След.</a>';
+                    }
+                }
+            }
+        }
+    }
+
+    if($from <> 0 && $from <> ''){
+        $prev = '<a href="" onclick="javascript:history.back(); return false;">Пред.</a>';
+    }
+
+    return $prev.' <span>/</span> '.$next;
+}
+
+function MakeProductOrder($shop){
+    $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/productdb.txt"));
+    $company = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/company.txt"));
+    $result = '';
+
+    foreach ($shop as $v => $i) {
+        if($array[$i]['image'] <> ''){
+            $result .= (include($_SERVER['DOCUMENT_ROOT'] . "/templates/elements/template_product_order.php"));
+        }
+    }
+
+    return $result;
+}
+
+function MakeOrder($from, $max){
+    if(!isset($from) || $from == ''){
+        $from = 0;
+    }
+    $array = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/orders.txt"));
+    $product = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/orders.txt"));
+
+    $result = '';
+    $catch = 0;
+    foreach ($array as $i => $v) {
+        if($i >= $from && $catch < $max){
+            if($array[$i]['date'] <> ''){
+                $result .= (include($_SERVER['DOCUMENT_ROOT'] . "/templates/elements/template_order_item.php"));
+                MakeProductOrder($array[$i]['cart']);
+                $catch++;
+            }
+        }
+    }
+
+    return $result;
+}
+
 
 ?>

@@ -1,5 +1,5 @@
 <!-- Список товаров -->
-<table class="catalog-list">
+<table class="catalog-list news-list">
     <tr class="table-grid">
         <td></td>
         <td></td>
@@ -16,20 +16,19 @@
     </tr>
     <tr class="catalog-list__header">
         <td colspan="6" class="left-text-align">
-            <h3>Общая стоимость <span><?=ProductPriceAmount(unserialize($_COOKIE['cart']))?></span> руб.</h3>
+            <h2>Список заказов</h2>
         </td>
         <td colspan="6" class="right-text-align">
-            <?= isset($_COOKIE['cart']) && count(unserialize($_COOKIE['cart'])) <> 0? '<a href="/checkout">Оформить заказ <i class="fa fa-long-arrow-right"></i></a>' : '';?>
+            <?php
+            if(!isset($_GET['i'])){
+                echo AddNextPrevOrder($_GET['f'],10);
+            }
+            ?>
         </td>
     </tr>
     <tr class="inline-table">
         <td colspan="12">
-            <?=MakeProductCart(unserialize($_COOKIE['cart']))?>
-        </td>
-    </tr>
-    <tr class="catalog-list__header">
-        <td colspan="12" class="center-text-align">
-
+            <?= MakeOrder($_GET['f'],10); ?>
         </td>
     </tr>
 </table>

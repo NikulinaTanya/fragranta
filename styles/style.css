@@ -461,6 +461,12 @@ hr{
     transition: all 100ms ease-in
 }
 
+.product__shopcart.gray_button{
+    border: 2px solid #999999;
+    color: #999999;
+    cursor: default;
+}
+
 .catalog-list__header > td > a.product__shopcart:hover{
     border: 2px solid #333333;
     color: #333333;
@@ -862,6 +868,7 @@ hr{
 .open-nav, .shoppingcart{
     cursor: pointer;
     vertical-align: top;
+    white-space: nowrap;
 }
 .open-nav i, .shoppingcart i{
     font-size: 18px;
@@ -871,7 +878,12 @@ hr{
     text-transform: uppercase;
     color: #cccccc;
     font-weight: 300;
-    padding: 0 5px;
+    padding: 0 2px;
+}
+.shoppingcart .cart_amount{
+    color: #f1a899;
+    padding: 0 5px 0 0;
+    font-size: 15px;
 }
 
 .catalog-list tr > td > * {
@@ -1359,4 +1371,25 @@ hr{
     width: 440px;
     float: right;
     margin: 10px 30px 10px 0;
+}
+
+.catalog-list.news-list .inline-table div.orders{
+    display: inline-block;
+    width: 20%;
+    padding-top: 10px
+}
+
+.news-list .orders .catalog-list__img{
+    height: 150px;
+    display: block;
+    padding-bottom: 20px
+}
+
+.news-list .orders .catalog-list__img > img{
+    height: 100%;
+}
+
+.catalog-list.news-list .inline-table div.order{
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
