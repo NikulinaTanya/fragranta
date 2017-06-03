@@ -1,4 +1,7 @@
-<!-- Фильтр поисковый -->
+<!-- Фильтр поисковый -->\
+<?php
+    $price = isset($_GET['price']) ? $_GET['price'] : 500;
+?>
 <form method="get" class="form">
     <table class="filter-elem">
         <tr class="table-grid">
@@ -28,7 +31,7 @@
             </td>
             <td colspan="5" class="filter-block__elem">
                 <p>Цена до:</p>
-                <div id="price-filter" data-start="<?=StartPrice($_GET['price'])?>" data-min="500" data-max="10000"></div>
+                <div id="price-filter" data-start="<?=StartPrice($price)?>" data-min="500" data-max="10000"></div>
                 <input type="text" id="price" name="price" />
             </td>
             <td colspan="2" class="filter-block__find">

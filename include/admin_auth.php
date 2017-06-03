@@ -3,8 +3,6 @@
 $login = 'admin';
 $password = '1111';
 
-session_start();
-
 if (isset($_POST['login']) && $_POST['login'] <> '') {
     if ($_POST['login'] == $login && $_POST['password'] == $password) {
         $_SESSION['admin_online'] = 1;
@@ -17,7 +15,6 @@ if (isset($_POST['login']) && $_POST['login'] <> '') {
 }
 
 if (isset($_POST['action']) AND $_POST['action']=='logout') {
-    session_start();
     session_destroy();
     header('Location: /');
 }

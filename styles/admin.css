@@ -54,6 +54,16 @@
     color: #333333;
 }
 
+.login-form__errors {
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #da573c;
+}
+
+.login-form__error-item {
+    color: #da573c;
+}
+
 .login-form > .login-form__submit > input, .login-form > label > select{
     text-transform: uppercase;
     font-weight: 300;

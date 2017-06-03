@@ -43,5 +43,5 @@ $product_new = array(
 array_unshift($product, $product_new);
 file_put_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/productdb.txt", serialize($product));
 
-header('location: '.$_SERVER['HTTP_REFERER']);
+header('location: /admin/addproduct.php?success=1');
 ?>

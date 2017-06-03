@@ -1,6 +1,5 @@
 <!-- Шапка -->
 <?php
-session_start();
 if($_SESSION['user_online'] == 1 && $_SESSION['user_message'] <> 0){
     include($_SERVER['DOCUMENT_ROOT'] . '/templates/elements/template_login.php');
 }
@@ -46,20 +45,18 @@ if($_SESSION['user_online'] == 1 && $_SESSION['user_message'] <> 0){
     <li><a href="/news">Новости / Акции</a></li>
     <li><a href="/contact">Контакты</a></li>
     <?php
-    session_start();
-    if($_SESSION['user_online'] == 1){
+    if(isset($_SESSION['user_online']) && $_SESSION['user_online'] == 1){
         echo '<li><a href="/user/edit">Профиль</a></li>';
     } else {
         echo '<li><a href="/user/registration">Регистрация</a></li>';
     }
-    if($_SESSION['user_online'] == 1){
+    if(isset($_SESSION['user_online']) && $_SESSION['user_online'] == 1){
         echo '<li><a href="/user/">Выйти</a></li>';
     } else {
         echo '<li><a href="/user/">Вход</a></li>';
     }
 
-    session_start();
-    if($_SESSION['admin_online'] == 1){
+    if(isset($_SESSION['admin_online']) && $_SESSION['admin_online'] == 1){
         echo '<li class="active"><a href="/admin/addproduct.php">Добавить +</a></li>';
     }
     ?>

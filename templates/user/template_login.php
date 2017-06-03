@@ -1,3 +1,7 @@
+<?php
+    $v = isset($_GET['v']) ? $_GET['v'] : '';
+    $p = isset($_GET['p']) ? $_GET['p'] : '';
+?>
 <table class="admin">
     <tr>
         <td colspan="2">
@@ -5,10 +9,10 @@
                 <h3><span>Fragranta.</span>
                     Вход.</h3>
                 <label class="login-form__input">
-                    <input type="text" name="login" placeholder="Логин" value="<?=$_GET['v']?>" />
+                    <input type="text" name="login" placeholder="Логин" value="<?=$v?>" />
                 </label>
                 <label class="login-form__input">
-                    <input type="password" name="password" placeholder="Пароль" value="<?=$_GET['p']?>" />
+                    <input type="password" name="password" placeholder="Пароль" value="<?=$p?>" />
                 </label>
                 <label class="login-form__submit">
                     <input type="submit" value="Войти" />

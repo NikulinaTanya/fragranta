@@ -1,6 +1,5 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/generator/functions.php");
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +22,7 @@ session_start();
 <body>
 
 <?php
-if($_SESSION['admin_online'] == 1){
+if(isset($_SESSION['admin_online']) && $_SESSION['admin_online'] == 1){
     include($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/template_order.php");
 } else {
     include($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/template_admin.php");

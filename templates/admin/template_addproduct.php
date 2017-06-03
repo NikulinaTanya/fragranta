@@ -1,4 +1,9 @@
 <table class="admin">
+    <?php if (isset($_GET['success']) && $_GET['success']) { ?>
+        <tr>
+            <td colspan="2">Товар был добвален</td>
+        </tr>
+    <?php } ?>
     <tr>
         <td colspan="2">
             <form class="login-form" method="post" action="/include/add_product.php" enctype="multipart/form-data">

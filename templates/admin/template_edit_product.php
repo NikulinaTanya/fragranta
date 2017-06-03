@@ -6,6 +6,11 @@ $amount = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db
 
 ?>
 <table class="admin">
+    <?php if (isset($_GET['success']) && $_GET['success']) { ?>
+        <tr>
+            <td colspan="2">Товар был изменен</td>
+        </tr>
+    <?php } ?>
     <tr>
         <td colspan="2">
             <form class="login-form" method="post" action="/include/change_product.php" enctype="multipart/form-data">

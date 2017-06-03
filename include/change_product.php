@@ -42,5 +42,5 @@ $product[$id] = array(
 );
 file_put_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/productdb.txt", serialize($product));
 
-header('location: '.$_SERVER['HTTP_REFERER']);
+header('location: /admin/edit_product.php?i=' . $id . '&success=1');
 ?>

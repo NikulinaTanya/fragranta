@@ -1,6 +1,5 @@
 <?php
 include($_SERVER['DOCUMENT_ROOT'] . "/generator/functions.php");
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +21,7 @@ session_start();
 </head>
 <body>
 <?php
-if($_SESSION['user_online'] == 1){
+if(isset($_SESSION['user_online']) && $_SESSION['user_online'] == 1){
     include($_SERVER['DOCUMENT_ROOT'] . "/templates/user/template_user_edit.php");
 } else {
     header('location: '.$_SERVER['HTTP_REFERER']);

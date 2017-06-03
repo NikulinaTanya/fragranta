@@ -1,5 +1,4 @@
 <?php
-session_start();
 $user = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/users.txt"));
 $day = file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/news_of_day.txt");
 $news = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/news.txt"));

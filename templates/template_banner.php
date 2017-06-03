@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!-- Баннер -->
 <table class="banner">
     <tr>

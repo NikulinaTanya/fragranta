@@ -2,6 +2,8 @@
 
 if ($array[$i]['price_old'] <> '') {
     $price_old = '<span>'.$array[$i]['price_old'].' руб.</span>';
+} else {
+    $price_old = '';
 }
 
 ?>

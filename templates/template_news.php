@@ -1,4 +1,9 @@
 <!-- Список товаров -->
+<?php
+    $i = isset($_GET['i']) ? $_GET['i'] : 0;
+    $f = isset($_GET['f']) ? $_GET['f'] : 0;
+    $adminOnline = isset($_SESSION['admin_online']) ? $_SESSION['admin_online'] : 0;
+?>
 <table class="catalog-list news-list">
     <tr class="table-grid">
         <td></td>
@@ -21,7 +26,7 @@
         <td colspan="6" class="right-text-align">
             <?php
             if(!isset($_GET['i'])){
-                echo AddNextPrevNews($_GET['f'],5);
+                echo AddNextPrevNews($f, 5);
             }
             ?>
         </td>
@@ -32,14 +37,14 @@
             if(isset($_GET['i'])){
                 MakeNews($_GET['i'],1);
             } else {
-                MakeNews($_GET['f'],5);
+                MakeNews($f,5);
             }
             ?>
         </td>
     </tr>
     <tr class="catalog-list__header">
         <td colspan="12" class="center-text-align">
-            <?=AddNews($_SESSION['admin_online'])?>
+            <?=AddNews($adminOnline)?>
         </td>
     </tr>
 </table>

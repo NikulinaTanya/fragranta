@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 if($_SESSION['admin_online'] == 1){
     $id = $_GET['i'];
 

@@ -1,7 +1,9 @@
 <?php
 
-if ($array[$i]['price_old'] <> '') {
+if (isset($array[$i]['price_old']) && $array[$i]['price_old'] <> '') {
     $price_old = '<span>'.$array[$i]['price_old'].' руб.</span>';
+} else {
+    $price_old = '';
 }
 
 ?>

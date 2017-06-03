@@ -1,4 +1,4 @@
-<?php  include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php"); session_start(); ?>
+<?php  include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

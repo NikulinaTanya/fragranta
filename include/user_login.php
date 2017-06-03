@@ -2,8 +2,6 @@
 include($_SERVER['DOCUMENT_ROOT']."/generator/functions.php");
 $user = unserialize(file_get_contents($_SERVER['DOCUMENT_ROOT']."/generator/db/users.txt"));
 
-session_start();
-
 if (isset($_POST['login']) && $_POST['login'] <> '') {
     if(LoginTest($_POST['login'], $user) == 0){
         header('Location: /admin/error?m=pass');
@@ -27,7 +25,6 @@ if (isset($_POST['login']) && $_POST['login'] <> '') {
 }
 
 if (isset($_POST['action']) AND $_POST['action']=='logout') {
-    session_start();
     session_destroy();
     header('Location: /');
 }

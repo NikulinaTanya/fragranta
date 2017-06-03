@@ -8,21 +8,31 @@ $id = $_GET['i'];
 
 $title = ' <h2 class="product__title">'.$company[$array[$id]['company']].' '.$array[$id]['name'].'</h2>';
 $price_now = $array[$id]['price_now'].' руб.';
-if($array[$id]['price_old'] <> ''){
+if(isset($array[$id]['price_old']) && $array[$id]['price_old'] <> ''){
     $price_old = $array[$id]['price_old'].' руб.';
+} else {
+    $price_old = '';
 }
 $price = '<p class="product__price">'.$price_now.' <span>'.$price_old.'</span></p>';
 if($array[$id]['family'] <> ''){
     $family = '<li><span>Семейство:</span> '.$array[$id]['family'].'</li>';
+} else {
+    $family = '';
 }
 if($array[$id]['high'] <> ''){
     $high = '<li><span>Верхние ноты:</span> '.$array[$id]['high'].'</li>';
+} else {
+    $high = '';
 }
 if($array[$id]['middle'] <> ''){
     $middle = '<li><span>Средние ноты:</span> '.$array[$id]['middle'].'</li>';
+} else {
+    $middle = '';
 }
 if($array[$id]['low'] <> ''){
     $low = '<li><span>Базовые ноты:</span> '.$array[$id]['low'].'</li>';
+} else {
+    $low = '';
 }
 
 $year = '<li><span>Год выпуска:</span> '.$array[$id]['year'].'</li>';
@@ -35,6 +45,8 @@ switch($array[$id]['category']){
     case 'Эксклюзивные': $category = '<a href="/exclusive" class="product__category">'.$array[$id]['category'].'</a>'; break;
     case 'Популярно': $category = '<a href="/popular" class="product__category">'.$array[$id]['category'].'</a>'; break;
 }
+
+$cart = isset($_COOKIE['cart']) ? $_COOKIE['cart'] : '';
 
 ?>
 <!-- Страница продукта -->
@@ -67,7 +79,7 @@ switch($array[$id]['category']){
                 <?=$year?>
                 <?=$amount?>
             </ul>
-            <?php if(FindInOneArrayCart($id, unserialize($_COOKIE['cart'])) <> 0): ?>
+            <?php if(FindInOneArrayCart($id, unserialize($cart)) <> 0): ?>
             <a class="product__shopcart gray_button" href="/cart">Добавлено в корзину!</a>
             <?php else: ?>
             <a class="product__shopcart" href="/include/add_to_shoping_cart.php?i=<?=$id?>">Добавить в корзину!</a>

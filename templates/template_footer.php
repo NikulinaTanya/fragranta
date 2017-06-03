@@ -6,7 +6,6 @@
                 <li><a href="/delivery">Доставка</a></li>
                 <li><a href="/pickup">Самовывоз</a></li>
                 <?php
-                session_start();
                 if($_SESSION['user_online'] == 1){
                     echo '<li><a href="/user/edit">Профиль</a></li>';
                 } else {
@@ -19,9 +18,9 @@
                 }
                 ?>
                 <?php
-                session_start();
-                if($_SESSION['admin_online'] == 1){
+                if(isset($_SESSION['admin_online']) && $_SESSION['admin_online'] == 1){
                     echo '<li class="active"><a href="/admin/addproduct">Добавить +</a></li>';
+                    echo '<li class="active"><a href="/admin/orders">Список заказов</a></li>';
                 }
                 ?>
             </ul>

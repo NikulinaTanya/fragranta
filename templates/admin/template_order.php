@@ -1,3 +1,7 @@
+<?php
+    $f = isset($_GET['f']) ? $_GET['f'] : '';
+?>
+
 <!-- Список товаров -->
 <table class="catalog-list news-list">
     <tr class="table-grid">
@@ -21,14 +25,14 @@
         <td colspan="6" class="right-text-align">
             <?php
             if(!isset($_GET['i'])){
-                echo AddNextPrevOrder($_GET['f'],10);
+                echo AddNextPrevOrder($f,10);
             }
             ?>
         </td>
     </tr>
     <tr class="inline-table">
         <td colspan="12">
-            <?= MakeOrder($_GET['f'],10); ?>
+            <?= MakeOrder($f,10); ?>
         </td>
     </tr>
 </table>
