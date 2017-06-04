@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="styles/jquery-ui.css" />
     <link rel="stylesheet" href="styles/setting.css" />
     <link rel="stylesheet" href="styles/style.css" />
+	
 
     <script src="js/jQuery.js"></script>
     <script src="js/jQueryUI.js"></script>
